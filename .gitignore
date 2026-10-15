@@ -1,0 +1,40 @@
+# Python
+.help/
+__pycache__
+*.pyc
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Files from develeopment
+MRS/cache/
+MRS/media/
+MRS/temp/
+
+logs/application.log
+dataset/drug-ndc.json
+# Compiled Levenshtein kernel (built by setup.bat / setup.sh / app startup)
+src/clevenshtein/liblevenshtein-*
+src/clevenshtein/build/
+*.so
+*.dll
+*.dylib
+*.obj
+*.exp
+*.lib
+*.pdb
+
+# Test and tooling caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# The medicine database is created by models.database.init_db() and populated
+# by tools/; it is data, not source.
+MRS/database/

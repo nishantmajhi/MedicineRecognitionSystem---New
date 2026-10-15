@@ -1,0 +1,13 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.pth filter=lfs diff=lfs merge=lfs -text
+# The C source must keep LF endings; MSVC and gcc both cope, but a CRLF
+# checkout confuses some MinGW toolchains.
+*.c text eol=lf
+*.h text eol=lf
+setup.sh text eol=lf
+
+# Compiled artefacts are binary and never diffed.
+*.so binary
+*.dll binary
+*.dylib binary

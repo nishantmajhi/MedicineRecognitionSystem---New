@@ -1,0 +1,75 @@
+article {
+  border: none;
+  border-radius: 0.8rem;
+  height: max-content;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.4s;
+}
+article:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+dt {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+}
+
+dd {
+  margin: 0.25rem 0 1.75rem 0;
+}
+
+figure {
+  margin: 3rem;
+}
+
+img {
+  border-radius: 1rem;
+  height: auto;
+}
+
+@media (orientation: landscape) {
+  article {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  dl {
+    padding-inline: 3rem 0;
+  }
+
+  #genericName {
+    font-size: 2rem;
+  }
+
+  img {
+    flex: 0;
+    width: 30dvw;
+  }
+}
+
+@media (orientation: portrait) {
+  article {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  dl {
+    margin: 0;
+    padding-inline: 3rem;
+  }
+
+  dd ul {
+    padding-inline-start: 0;
+  }
+
+  #genericName {
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}

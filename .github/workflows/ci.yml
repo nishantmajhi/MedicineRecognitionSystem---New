@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      # Only what the suite imports. EasyOCR, and the Torch it pulls in, are
+      # loaded lazily and replaced by a fake in every test, so they are left
+      # out; requirements.txt is used as constraints so every version is
+      # still the one the app pins.
+      - run: >
+          pip install -c requirements.txt -r requirements-dev.txt
+          fastapi python-multipart numpy opencv-python-headless pillow
+      - run: pytest -q

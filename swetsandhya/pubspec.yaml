@@ -1,0 +1,29 @@
+name: swetsandhya
+description: Point your camera at a medicine box to see what it treats.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Live camera preview and still capture.
+  camera: ^0.11.0+2
+
+  # Multipart upload to the Medicine Recognition System backend.
+  http: ^1.2.2
+  http_parser: ^4.0.2
+
+  # "Choose a photo" fallback when the camera is unavailable.
+  image_picker: ^1.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

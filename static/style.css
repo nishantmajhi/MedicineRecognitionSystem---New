@@ -1,0 +1,82 @@
+body {
+  margin: 2rem 4rem;
+  font-family: sans-serif;
+}
+@media (orientation: portrait) {
+  body {
+    margin: 2rem;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.1rem;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+h1 > span:first-child {
+  color: navy;
+}
+
+h2 {
+  margin-block: 0.75rem 2.25rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+section {
+  border: 2px dashed grey;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60dvh;
+  transition: background-color 0.4s, box-shadow 0.4s, border 0.4s;
+}
+section:focus,
+section:hover,
+section.dragover {
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+section.dragover {
+  border: 2px dotted black;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1ch;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.loading {
+  animation: pulseBrightness 1s infinite ease-in-out;
+}
+
+@keyframes pulseBrightness {
+  0%,
+  100% {
+    color: #000;
+  }
+  25%,
+  75% {
+    color: #555;
+  }
+  50% {
+    color: #999;
+  }
+}

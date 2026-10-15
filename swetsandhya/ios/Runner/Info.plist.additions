@@ -1,0 +1,18 @@
+<!-- Merge these keys into ios/Runner/Info.plist after running `flutter create .`
+
+     iOS shows these strings verbatim in the permission dialog, so they must say
+     why the app needs access, not merely that it does. -->
+
+<key>NSCameraUsageDescription</key>
+<string>SwetSandhya uses the camera to read the name printed on a medicine package.</string>
+
+<key>NSPhotoLibraryUsageDescription</key>
+<string>SwetSandhya reads medicine names from photos you choose from your library.</string>
+
+<!-- Development only: allows plain HTTP to the local backend.
+     Remove before shipping and serve the backend over HTTPS. -->
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+</dict>
